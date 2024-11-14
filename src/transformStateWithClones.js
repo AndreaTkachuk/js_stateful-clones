@@ -10,8 +10,6 @@ function transformStateWithClones(state, actions) {
   const stateHistory = [];
   const stateNewObject = Object.assign({}, state);
 
-  // stateHistory.push(state);
-
   for (const action of actions) {
     if (action.type === 'addProperties') {
       Object.assign(stateNewObject, action.extraData);
